@@ -110,7 +110,7 @@ def handle_play(args: argparse.Namespace) -> None:
     for i, path in enumerate(session_data.stages[current_stage].paths):
         paths += f"- Path {i} - {path.title} - {path.lore}\n\n"
 
-    message_to_bot = f"""Let's play. I will provide you short lore with different paths to chose. Answer in json format, you should to choose one, correct path and put it under key 'answer' and under key 'description' - why you picked this path.
+    message_to_bot = f"""Let's play. I will provide you with a short lore containing different paths to choose from. Please respond in JSON format. You should select one correct path and place it under the key 'answer' and provide an explanation for your choice under the key 'description'.
     
 The lore: {session_data.stages[current_stage].lore}
 Paths:
